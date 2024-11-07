@@ -145,8 +145,10 @@ function setStatusClass(element, correct) {
     // ! adds the colours to show if it's right or wrong
     if (correct) {
         element.classList.add('correct');
+        disableAnswerButtons();
     } else {
         element.classList.add('wrong');
+        disableAnswerButtons();
     }
 }
     // ! removes the right or wrong colours to reset it for the next question
