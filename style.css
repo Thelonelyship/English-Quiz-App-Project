@@ -38,7 +38,6 @@ p{
     position: relative;
     color: rgba(255, 251, 251, 0.822);
     padding: 20px;
-    max-width: 600px;
     border-radius: 12px;
     background-color: rgba(91, 9, 133, 0.514);
     border: 3px solid black;
@@ -114,7 +113,6 @@ label{
 /* ! Quiz Section elements */
 
 .quiz{
-    width: 420px;
     font-size: 30px;
 }
 
@@ -387,13 +385,13 @@ label{
 
 @media (max-width: 430){
     .maincontainer{
-        min-height: 100vh;
+        max-height: 100vh;
         max-width: 100vw;
         border-radius: 0;
     }
 
     .startMenu, .quiz, .end, .graphpage{
-        min-height: 100vh;
+        max-height: 100vh;
         max-width: 100vw;
         border-radius: 0;
     }
