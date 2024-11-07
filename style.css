@@ -37,13 +37,18 @@ p{
 .maincontainer{
     position: relative;
     color: rgba(255, 251, 251, 0.822);
-    padding: 20px;
     border-radius: 12px;
     background-color: rgba(91, 9, 133, 0.514);
     border: 3px solid black;
     box-shadow: 0px 0px 30px rgb(149, 0, 248);
     font-size: 20px;
     overflow: hidden;
+}
+
+.maincontainer, .quizcontainer, .endcontainer, .graphcontainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 
@@ -383,122 +388,75 @@ label{
 
 /* ! Media Query */
 
-@media (max-width: 468){
-    .maincontainer{
-        max-height: 100vh;
-        max-width: 100vw;
-        border-radius: 0;
-        font-size: 12px;
+@media (max-width: 576px) {
+    .maincontainer, .quizcontainer, .endcontainer, .graphcontainer {
+        width: 100%;      
+        margin: 0;        
+        padding: 10px;    
     }
-
-    .startMenu, .quiz, .end, .graphpage{
-        max-height: 100vh;
-        max-width: 100vw;
-        border-radius: 0;
-        font-size: 12px;
+    .heading {
+        font-size: 1.4rem;
     }
-    
-    .graphcontainer {
+    p, label {
+        font-size: 0.9rem;
+    }
+    .answerbutton, #restart, #restart2, #nextquestion, #startquiz {
+        width: 100%;      
+        font-size: 0.9rem;
+        padding: 20px;
+        margin: 5px 0;    
+    }
+    .graphimg {
         width: 100%;
-        padding: 10px;
-        overflow-x: hidden;
-    }
-    
-    .graphdisplay {
-        text-align: center;
-    }
-
-    .graphdisplay .graphimg {
-        width: 95%;
-        max-width: 100%;
-        height: auto; 
-        display: block; 
-        margin: 0 auto; 
-    }
-
-    #restart2 {
-        width: 100%; 
-        padding: 10px;
-        font-size: 16px; 
+        height: auto;     
     }
 }
 
-@media (min-width: 430) and (max-width: 800){
-    .maincontainer{
-        max-height: 100vh;
-        max-width: 100vw;
-        border-radius: 0;
-        font-size: 14px;
+@media (max-width: 768px) {
+    .maincontainer, .quizcontainer, .endcontainer, .graphcontainer {
+        padding: 10px;
     }
-
-    .startMenu, .quiz, .end, .graphpage{
-        max-height: 100vh;
-        max-width: 100vw;
-        border-radius: 0;
-        font-size: 14px;
+    .heading {
+        font-size: 1.6rem;
     }
-    
-    .graphcontainer {
+    p, label {
+        font-size: 0.9rem;
+    }
+    #question {
+        font-size: 1rem;
+    }
+    .answerbutton {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    #restart, #restart2, #nextquestion, #startquiz {
         width: 100%;
+        font-size: 1rem;
         padding: 10px;
-        overflow-x: hidden;
-    }
-    
-    .graphdisplay {
-        text-align: center;
-    }
-
-    .graphdisplay .graphimg {
-        width: 95%;
-        max-width: 100%;
-        height: auto; 
-        display: block; 
-        margin: 0 auto; 
-    }
-
-    #restart2 {
-        width: 100%; 
-        padding: 10px;
-        font-size: 16px; 
     }
 }
 
-@media (min-width: 800){
-    .maincontainer{
-        max-height: 100vh;
-        max-width: 100vw;
-        border-radius: 0;
-        font-size: 14px;
+@media (max-width: 1024px) {
+    .maincontainer, .quizcontainer, .endcontainer, .graphcontainer {
+        padding: 15px;
     }
-
-    .startMenu, .quiz, .end, .graphpage{
-        max-height: 100vh;
-        max-width: 100vw;
-        border-radius: 0;
-        font-size: 14px;
-    }
-    
-    .graphcontainer {
-        width: 100%;
-        padding: 10px;
-        overflow-x: hidden;
-    }
-    
-    .graphdisplay {
+    .heading {
+        font-size: 1.8rem;
         text-align: center;
     }
-
-    .graphdisplay .graphimg {
-        width: 600px;
-        max-width: 800px;
-        height: auto; 
-        display: block; 
-        margin: 0 auto; 
+    p, label {
+        font-size: 1rem;
     }
-
-    #restart2 {
-        width: 100%; 
-        padding: 10px;
-        font-size: 16px; 
+    .levelselect, .buttondiv, .submitbtn, .graph {
+        text-align: center;
+    }
+    #question {
+        font-size: 1.2rem;
+    }
+    .answerbutton {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0;
+        font-size: 1rem;
     }
 }
