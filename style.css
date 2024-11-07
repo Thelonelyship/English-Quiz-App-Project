@@ -229,12 +229,6 @@ label{
 
 
 
-.answerbutton.selected,
-.button:hover {
-    background-color: rgb(27, 187, 250);
-    border-color: rgb(0, 140, 255);
-}
-
 
 .answerbutton.correct{
     border: 5px solid rgba(172, 255, 47, 0.911);
@@ -267,6 +261,7 @@ label{
     margin-bottom: 20px;
     font-size: 20px;
     background-color: rgb(75, 144, 233);
+    color: black;
     margin-right: 80px;
     text-align: center;
     width: 300px;
