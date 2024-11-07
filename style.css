@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Cute+Font&family=Dangrek&family=DynaPuff:wght@400..700&family=Modak&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Cute+Font&family=Dangrek&family=DynaPuff:wght@400..700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Modak&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+/* ! general styling */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 24, 0);
+}
+
+p{
+    margin: 10px;
+}
+
+.inst{
+    font-size: 30px;
+    color: rgba(0, 255, 0, 0.753);
+    text-align: center;
+}
+
+
+
+/* ! Main container styling  */
+
+.maincontainer{
+    position: relative;
+    color: rgba(255, 251, 251, 0.822);
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 12px;
+    background-color: rgba(91, 9, 133, 0.514);
+    border: 3px solid black;
+    box-shadow: 0px 0px 30px rgb(149, 0, 248);
+    font-size: 20px;
+    overflow: hidden;
+}
+
+
+
+
+/* ! Start Menu styling */
+
+label{
+    font-family: "Inknut Antiqua", serif;
+    padding: 10px;
+    font-size: 30px;
+    color: rgb(255, 251, 0);
+}
+
+.levelselect{
+    text-align: center;
+}
+
+.heading{
+    font-family: "Chonburi", serif;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    margin-top: 15px;
+    margin-bottom: 60px;;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: rgba(255, 217, 0, 0.692);
+}
+
+
+#level{
+    font-size: 20px;
+    padding: 5px;
+}
+
+.buttondiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#startquiz{
+    font-size: 20px;
+    background-color: rgb(75, 233, 180);
+    margin: 20px;
+    text-align: center;
+    width: 300px;
+    height: 60px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+.startquiz:hover{
+    opacity: 0.6;
+}
+
+/* ! Hides unused elements */
+
+.hideall{
+    display: none;
+}
+
+
+
+/* ! Quiz Section elements */
+
+.quiz{
+    width: 420px;
+    font-size: 30px;
+}
+
+.quiz .score{
+    display: flex;
+    justify-content: end;    
+    margin-bottom: 5px;
+}
+.quiz .score{
+    font-size: 18px;
+    color: rgb(0, 194, 113);
+    gap: 5px;
+}
+
+
+/* ! Timer */
+.timer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.timer .progress{
+    position: relative;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(0, 24, 0);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px; 
+    padding: 3px; 
+    background:linear-gradient(45deg,red 0%,rgba(109, 2, 170, 0.692) 50%,rgba(109, 2, 170, 0.692) 100%); 
+    /* ! webkit masks allow you to clip onto complex shapes so I used one because you can't border-radius a gradient */
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude; 
+  }
+
+.progressbar{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(to right, rgb(130, 4, 248), rgba(101, 0, 196, 0.247));
+    overflow: hidden;
+    transition: 1s linear;
+}
+
+.timer .progress .timeleft{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* ! Questions */
+
+.questionwrapper #number{
+    font-size: 18px;
+    color: rgba(255, 217, 0, 0.664);
+    margin-bottom: 60px;
+}
+
+.questionwrapper #number .total{
+    font-size: 18px;
+    color: rgba(255, 217, 0, 0.664);
+}
+
+.questionwrapper .question{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+
+/* ! Answers */
+
+
+.answerbutton{
+    margin-bottom: 20px;
+    margin-left: 25px;
+    width: 90%;
+    height: 60px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: purple;
+    border: 3px solid grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3 linear;
+}
+
+
+
+.answerbutton.selected,
+.button:hover {
+    background-color: rgb(27, 187, 250);
+    border-color: rgb(0, 140, 255);
+}
+
+
+.answerbutton.correct{
+    border: 5px solid rgba(172, 255, 47, 0.911);
+    background-color: rgba(127, 255, 212, 0.582);
+    color: black;
+}
+.answerbutton.wrong{
+    border: 5px solid rgba(255, 0, 0, 0.911);
+    background-color: rgba(255, 0, 0, 0.541);
+    color: black;
+}
+
+
+/* ! general */
+
+.questionwrapper, .answerwrapper{
+    margin-bottom: 50px;
+}
+
+
+/* ! Next button */
+
+.submitbtn{
+    margin-left: 50px;
+}
+
+
+#nextquestion{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    background-color: rgb(75, 144, 233);
+    margin-right: 80px;
+    text-align: center;
+    width: 300px;
+    height: 60px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+#nextquestion:hover{
+    opacity: 0.6;
+}
+
+
+/* ! Final Page Styling */
+
+.end{
+    text-align: center;
+}
+
+.end .score{
+    color: white;
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.end .scoretext{
+    color: rgba(255, 254, 254, 0.712);
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.goodluck{
+    font-family: "Inknut Antiqua", serif;
+    font-size: 20px;
+    color: rgb(0, 255, 21);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+/* ! Graph Display Page */
+
+
+.graphcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.graphimg{
+    width: 95%;
+    max-width: 100%;
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+/* ! restart quiz button */
+
+#restart{
+    font-size: 20px;
+    background-color: rgb(238, 255, 0);
+    margin: 40px;
+    text-align: center;
+    width: 350px;
+    height: 60px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+#restart:hover{
+    opacity: 0.6;
+}
+
+
+#restart2{
+    font-size: 20px;
+    background-color: rgb(238, 255, 0);
+    margin: 40px;
+    text-align: center;
+    width: 350px;
+    height: 60px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+#restart2:hover{
+    opacity: 0.6;
+}
+
+#graphbutton{
+    font-size: 20px;
+    background-color: rgb(0, 174, 255);
+    margin: 10px;
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+#graphbutton:hover{
+    opacity: 0.6;
+}
+
+
+/* ! Media Query */
+
+@media (max-width: 430){
+    .maincontainer{
+        min-height: 100vh;
+        max-width: 100vw;
+        border-radius: 0;
+    }
+
+    .startMenu, .quiz, .end, .graphpage{
+        min-height: 100vh;
+        max-width: 100vw;
+        border-radius: 0;
+    }
+    
+    .graphcontainer {
+        width: 100%;
+        padding: 10px;
+        overflow-x: hidden;
+    }
+    
+    .graphdisplay {
+        text-align: center;
+    }
+
+    .graphdisplay .graphimg {
+        width: 95%;
+        max-width: 100%;
+        height: auto; 
+        display: block; 
+        margin: 0 auto; 
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    #restart2 {
+        width: 100%; 
+        padding: 10px;
+        font-size: 16px; 
+    }
+}

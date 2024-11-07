@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="maincontainer">
+    
+    <div class="startMenu ">
+        <h1 class="heading">English Quiz App</h1>
+        <p>When you take a test like TOEIC, TOEFL and IELTS, you have a time limit. </p>
+           
+            <p style="text-align: center;"><i>Most people run out of time.</i></p>
+        <br>
+        <p style="text-align: center;">Challenge yourself to answer quickly!</p>
+        <br>
+        <p class="inst">20 questions per level</p>
+        <p class="inst">20 seconds per question</p>
+        <br> <p>If you don't answer in 20 seconds, it will be marked as incorrect.</p>
+        <p>Check the graph at the end of the quiz to see how those levels compare to TOEIC, TOEFL and IELTS scores too.</p>
+        <br>
+        <hr>
+        <br>
+        <div class="levelselect">
+        <label for="level">Select Level: </label>
+        <select name="" id="level">
+            <option value="A1">A1 - Lower Beginner</option>
+            <option value="A2">A2 - Upper Beginner</option>
+            <option value="B1">B1 - Lower Intermediate</option>
+            <option value="B2">B2 - Upper Intermediate</option>
+            <option value="C1">C1 - Lower Advanced</option>
+            <option value="C2">C2 - Upper Advanced</option>
+            <option value="Fluent">Fluent and Godlike</option>
+        </select>
+    </div>
+    <div class="buttondiv">
+        <button id="startquiz">Click to Start</button>
+    </div>
+</div>
+    
+    <div class="quiz hideall">
+        <div class="timer">
+            <div class="progress">
+                <div class="progressbar"></div>
+                <span class="timeleft"></span>
+            </div>
+        </div>
+        <div class="questionwrapper">
+            
+            <div id="topbars">
+                <div class="score hideall">Score: <span id="scoreValue">0</span></div>
+                <div id="number">
+                Question <span class="current">1</span> / <span class="total">10</span>
+            </div>
+        </div>
+        
+            <div id="question">QUESTIONS HERE</div>
+        </div>
+            <div id="answerwrapper">
+                <div class="answerbutton"></div>
+                <div class="answerbutton"></div>
+                <div class="answerbutton"></div>
+                <div class="answerbutton"></div>
+        </div>
+        <div class="submitbtn">
+        <button id="nextquestion">Next</button>
+    </div>
+</div>
+<div class="end hideall">
+    <h1 class="heading">English Quiz App</h1>
+    <div class="score">
+        <div class="scoretext">Your score:</div>
+        <div>
+        <span class="finalscore">0</span>
+        <span class="totalscore">/20</span>
+    </div>
+</div>
+    <p>Thank you for taking the English grammar quiz!</p>
+    <br>
+    <p class="goodluck">Good luck on your learning journey!</p>
+        <br>
+        <p class="graph"><button id="graphbutton">Click to show the graph</button></p> <p class="finaltext">This graph shows estimated scores matching CEFR levels with TOEIC, TOEFL and IELTS.</p>
+        <p style="color:rgb(0, 143, 209)">Before you go, why not try the other levels?</p>
+<button id="restart">Back to Main Menu</button>
+</div>
+
+<div class="graphpage hideall">
+    <div class="graphcontainer">
+        <h1 class="heading">English Quiz App</h1>
+    <div class="graphdisplay"><img src="/graph/levels.png" alt="graph" class="graphimg"></div>
+    <br>
+    <p>This graph shows CEFR, TOEIC, TOEFL and IELTS scores that are estimated to match.</p>
+    <p>For example:</p>
+    <p>If you score a 450 on TOEIC, you would be about a B1 in CEFR levels and about a 4 in IELTS bands.</p>
+    <br>
+    <button id="restart2">Back to Main Menu</button>
+</div>
+    </div>
+</div>
+
+</body>
+</html> 
