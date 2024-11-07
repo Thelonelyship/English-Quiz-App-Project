@@ -388,12 +388,14 @@ label{
         max-height: 100vh;
         max-width: 100vw;
         border-radius: 0;
+        font-size: 12px;
     }
 
     .startMenu, .quiz, .end, .graphpage{
         max-height: 100vh;
         max-width: 100vw;
         border-radius: 0;
+        font-size: 12px;
     }
     
     .graphcontainer {
@@ -412,10 +414,6 @@ label{
         height: auto; 
         display: block; 
         margin: 0 auto; 
-    }
-
-    p {
-        font-size: 14px;
     }
 
     #restart2 {
