@@ -318,7 +318,7 @@ label{
 }
 
 .graphimg{
-    width: 95%;
+    width: 55%;
     max-width: 100%;
     height: auto; 
     display: block; 
@@ -383,7 +383,7 @@ label{
 
 /* ! Media Query */
 
-@media (max-width: 430){
+@media (max-width: 468){
     .maincontainer{
         max-height: 100vh;
         max-width: 100vw;
@@ -411,6 +411,86 @@ label{
     .graphdisplay .graphimg {
         width: 95%;
         max-width: 100%;
+        height: auto; 
+        display: block; 
+        margin: 0 auto; 
+    }
+
+    #restart2 {
+        width: 100%; 
+        padding: 10px;
+        font-size: 16px; 
+    }
+}
+
+@media (min-width: 430) and (max-width: 800){
+    .maincontainer{
+        max-height: 100vh;
+        max-width: 100vw;
+        border-radius: 0;
+        font-size: 14px;
+    }
+
+    .startMenu, .quiz, .end, .graphpage{
+        max-height: 100vh;
+        max-width: 100vw;
+        border-radius: 0;
+        font-size: 14px;
+    }
+    
+    .graphcontainer {
+        width: 100%;
+        padding: 10px;
+        overflow-x: hidden;
+    }
+    
+    .graphdisplay {
+        text-align: center;
+    }
+
+    .graphdisplay .graphimg {
+        width: 95%;
+        max-width: 100%;
+        height: auto; 
+        display: block; 
+        margin: 0 auto; 
+    }
+
+    #restart2 {
+        width: 100%; 
+        padding: 10px;
+        font-size: 16px; 
+    }
+}
+
+@media (min-width: 800){
+    .maincontainer{
+        max-height: 100vh;
+        max-width: 100vw;
+        border-radius: 0;
+        font-size: 14px;
+    }
+
+    .startMenu, .quiz, .end, .graphpage{
+        max-height: 100vh;
+        max-width: 100vw;
+        border-radius: 0;
+        font-size: 14px;
+    }
+    
+    .graphcontainer {
+        width: 100%;
+        padding: 10px;
+        overflow-x: hidden;
+    }
+    
+    .graphdisplay {
+        text-align: center;
+    }
+
+    .graphdisplay .graphimg {
+        width: 600px;
+        max-width: 800px;
         height: auto; 
         display: block; 
         margin: 0 auto; 
