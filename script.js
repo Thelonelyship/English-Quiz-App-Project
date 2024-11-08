@@ -82,7 +82,7 @@ function startGame() {
 function nextQuestion() {
     resetState();
     showQuestion(shuffledQ[currentQuestionIndex]);
-    questionNumber.innerText = `Question: ${currentQuestionIndex + 1}`;
+    questionNumber.innerText = `Question: ${currentQuestionIndex + 1} / 20`;
 
 }
 

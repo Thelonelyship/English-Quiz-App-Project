@@ -218,7 +218,7 @@ label{
     border-radius: 10px;
     font-size: 20px;
     color: white;
-    background-color: purple;
+    background-color: rgb(177, 0, 177);
     border: 3px solid grey;
     display: flex;
     justify-content: space-between;
