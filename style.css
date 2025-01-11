@@ -391,6 +391,9 @@ label{
         padding: 10px;   
         max-height: 100vh; 
     }
+    .maincontainer{
+        height: 90vh;
+    }
     .heading {
         font-size: 1.4rem;
     }
@@ -415,6 +418,9 @@ label{
 @media (max-width: 768px) {
     .maincontainer, .quizcontainer, .endcontainer, .graphcontainer {
         padding: 10px;
+    }
+    .maincontainer{
+        height: 90vh;
     }
     .heading {
         font-size: 1.6rem;
